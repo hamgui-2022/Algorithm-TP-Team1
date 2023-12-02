@@ -27,6 +27,7 @@
 		656919BC2B15EEE30098A827 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 656919B32B15EEE30098A827 /* Pretendard-Medium.otf */; };
 		656919BD2B15EEE30098A827 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 656919B42B15EEE30098A827 /* Pretendard-Light.otf */; };
 		656919D32B18621D0098A827 /* StationDic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656919D22B18621D0098A827 /* StationDic.swift */; };
+		656919E32B1B08E20098A827 /* Logic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656919E22B1B08E20098A827 /* Logic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		656919B32B15EEE30098A827 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		656919B42B15EEE30098A827 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		656919D22B18621D0098A827 /* StationDic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDic.swift; sourceTree = "<group>"; };
+		656919E22B1B08E20098A827 /* Logic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logic.swift; sourceTree = "<group>"; };
 		866CD863E774FBB2BC4AA6F9 /* Pods-Algorithm-Team1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Algorithm-Team1.debug.xcconfig"; path = "Target Support Files/Pods-Algorithm-Team1/Pods-Algorithm-Team1.debug.xcconfig"; sourceTree = "<group>"; };
 		B6077D74CFFC006E66714DFC /* Pods_Algorithm_Team1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Algorithm_Team1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 				656919D12B1862060098A827 /* Model */,
 				656919912B15CB400098A827 /* Assets.xcassets */,
 				656919932B15CB400098A827 /* LaunchScreen.storyboard */,
+				656919E12B1B08D30098A827 /* Logic */,
 				6569199D2B15CE870098A827 /* Resources */,
 				6569199E2B15CE970098A827 /* Extension */,
 				656919962B15CB400098A827 /* Info.plist */,
@@ -176,6 +179,14 @@
 				656919D22B18621D0098A827 /* StationDic.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		656919E12B1B08D30098A827 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				656919E22B1B08E20098A827 /* Logic.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		F9BD4A8C693384B4398BDA62 /* Frameworks */ = {
@@ -310,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				656919A12B15CEC50098A827 /* Font+Ext.swift in Sources */,
+				656919E32B1B08E20098A827 /* Logic.swift in Sources */,
 				6569198D2B15CB3F0098A827 /* ViewController.swift in Sources */,
 				656919A92B15E32A0098A827 /* StationCell.swift in Sources */,
 				656919A22B15CEC50098A827 /* UIColor+Ext.swift in Sources */,
