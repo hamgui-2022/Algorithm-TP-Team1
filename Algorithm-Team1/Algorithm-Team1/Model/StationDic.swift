@@ -37,3 +37,6 @@ let stationDictionary: [String: Array<Double>] = [
     "문정":[    37.48602386    ,    127.1224758    ],
     "장지":[    37.4786317    ,    127.126172    ]
 ]
+
+var WhereStations = [String]()
+var numberOfStations: Int = 0

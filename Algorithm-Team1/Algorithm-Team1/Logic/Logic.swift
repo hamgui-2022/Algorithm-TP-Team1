@@ -27,22 +27,6 @@ func haversineDistance(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -
     return distance
 }
 
-//func findNearestStation(subwayStations: [String: (Double, Double)], coordinates: (Double, Double)) -> String? {
-//    do {
-//        guard let nearestStation = try subwayStations.min(by: {
-//            haversineDistance(lat1: coordinates.0, lon1: coordinates.1, lat2: $0.value.0, lon2: $0.value.1)
-//                < haversineDistance(lat1: coordinates.0, lon1: coordinates.1, lat2: $1.value.0, lon2: $1.value.1)
-//        })?.key else {
-//            print("Error: No nearest station found")
-//            return nil
-//        }
-//        return nearestStation
-//    } catch {
-//        print("Error: \(error)")
-//        return nil
-//    }
-//}
-
 func findNearestStation(subwayStations: [String: [Double]], coordinates: (Double, Double)) -> String? {
     do {
         guard let nearestStation = try subwayStations.min(by: {
@@ -59,37 +43,12 @@ func findNearestStation(subwayStations: [String: [Double]], coordinates: (Double
     }
 }
 
-//func calculateMidpoint(coordinates: (Double, Double)...) -> (Double, Double) {
-//    let numCoordinates = Double(coordinates.count)
-//    let midLat = coordinates.map { $0.0 }.reduce(0.0, +) / numCoordinates
-//    let midLon = coordinates.map { $0.1 }.reduce(0.0, +) / numCoordinates
-//    return (midLat, midLon)
-//}
-
 func calculateMidpoint(coordinates: [[Double]]) -> (Double, Double) {
     let numCoordinates = coordinates.count
     let midLat = coordinates.reduce(0.0) { $0 + $1[0] } / Double(numCoordinates)
     let midLon = coordinates.reduce(0.0) { $0 + $1[1] } / Double(numCoordinates)
     return (midLat, midLon)
 }
-
-//func createGraph(subwayStations: [String: (Double, Double)]) -> [String: [String: Double]] {
-//    var graph = [String: [String: Double]]()
-//
-//    for (station1, coord1) in subwayStations {
-//        graph[station1] = [:]
-//
-//        for (station2, coord2) in subwayStations {
-//            if station1 != station2 {
-//                // Add edges with weights representing Haversine distances
-//                let distance = haversineDistance(lat1: coord1.0, lon1: coord1.1, lat2: coord2.0, lon2: coord2.1)
-//                graph[station1]?[station2] = distance
-//            }
-//        }
-//    }
-//
-//    return graph
-//}
 
 func createGraph(subwayStations: [String: [Double]]) -> [String: [String: Double]] {
     var graph = [String: [String: Double]]()
@@ -176,15 +135,6 @@ func main() {
         return
     }
 
-//    // Use selectedStations to perform further calculations or operations
-//    // For example, find coordinates of the entered stations and print them
-//    for station in selectedStations {
-//        guard let coordinates = findStationCoordinates(stationName: station) else {
-//            print("Error: Coordinates not found for station \(station)")
-//            return
-//        }
-//        print("Coordinates for \(station): \(coordinates)")
-//    }
     // Create a graph and add edges
         let graph = createGraph(subwayStations: stationDictionary)
 

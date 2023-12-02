@@ -59,7 +59,6 @@ class SelectMyStationViewController: UIViewController {
     
     private let subLabel : UILabel = {
         let label = UILabel()
-        //label.text = "어떤 목표를 가진 모각러들과 함께 성장하고 싶으신가요?"
         label.text = ""
         label.textColor = UIColor(hex: "808497")
         label.font = UIFont.pretendard(.medium, size: 16)
@@ -177,7 +176,7 @@ class SelectMyStationViewController: UIViewController {
     
     private func nextButtonIsOn() {
         nextButton.isUserInteractionEnabled = true
-        nextButton.backgroundColor = UIColor(hex: "475FFD")
+        nextButton.backgroundColor = UIColor(hex: "D7F2K1")
     }
     
     private func nextButtonIsOff() {

@@ -188,10 +188,6 @@ class ViewController: UIViewController {
         // 기본위치 가천대역으로
         view.moveCamera(NMFCameraUpdate(scrollTo: NMGLatLng(lat: 37.4485553966264, lng: 127.126686575598)))
         
-        //let marker = NMFMarker()
-        //marker.position = NMGLatLng(lat: 37.4485553966264, lng: 127.126686575598)
-        //marker.mapView = view
-        
         return view
     }()
     
@@ -351,6 +347,7 @@ class ViewController: UIViewController {
         button.layer.cornerRadius = 15
         //button.layer.backgroundColor = UIColor(hex: "59B8FF").cgColor
         button.layer.backgroundColor = UIColor(hex: "D7F2K1").cgColor
+        button.addTarget(self, action: #selector(finalMeetBtnDidTap), for: .touchUpInside)
         
         return button
     }()
@@ -360,33 +357,50 @@ class ViewController: UIViewController {
         let selectVC = SelectMyStationViewController()
         print("tapped")
         locationCount += 1
+        numberOfStations = locationCount
         
         switch locationCount {
         case 1:
             selectVC.completionHandler = {
                 text in
                 self.firstLocationTitle.text = text
+                WhereStations.append(text)
             }
+            
         case 2:
             selectVC.completionHandler = {
                 text in
                 self.secondLocationTitle.text = text
+                WhereStations.append(text)
             }
+            
         case 3:
             selectVC.completionHandler = {
                 text in
                 self.thirdLocationTitle.text = text
+                WhereStations.append(text)
             }
+            
         case 4:
             selectVC.completionHandler = {
                 text in
                 self.fourthLocationTitle.text = text
+                WhereStations.append(text)
             }
+            
         default:
             break
         }
        
         self.navigationController?.pushViewController(selectVC, animated: true)
+    }
+    
+    @objc func finalMeetBtnDidTap() {
+        print(WhereStations)
+        print(numberOfStations)
+        
+        let whereVC = WhereViewController()
+        self.navigationController?.pushViewController(whereVC, animated: true)
     }
     
     @objc func addFirstMarker() {
@@ -422,7 +436,7 @@ class ViewController: UIViewController {
 
 // MARK: - PREVIEW
 
- @available(iOS 17.0, *)
- #Preview("MapVC") {
-     ViewController()
- }
+// @available(iOS 17.0, *)
+// #Preview("MapVC") {
+//     ViewController()
+// }

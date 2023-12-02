@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         
         //let firstViewController = SelectMyStationViewController()
+        //let firstViewController = WhereViewController()
         let firstViewController = ViewController()
         
         let navigationController = UINavigationController(rootViewController: firstViewController)
