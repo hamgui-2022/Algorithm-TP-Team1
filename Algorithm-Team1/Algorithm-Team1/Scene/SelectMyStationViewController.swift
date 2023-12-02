@@ -60,7 +60,7 @@ class SelectMyStationViewController: UIViewController {
     private let subLabel : UILabel = {
         let label = UILabel()
         //label.text = "어떤 목표를 가진 모각러들과 함께 성장하고 싶으신가요?"
-        label.text = "?"
+        label.text = ""
         label.textColor = UIColor(hex: "808497")
         label.font = UIFont.pretendard(.medium, size: 16)
         return label
